@@ -11,11 +11,7 @@ for command in commands:
     if command[0] == 'push':
         queue.append(command[1])
     elif command[0] == 'pop':
-        if queue:
-            pop = queue.popleft()
-            print(pop)
-        else:
-            print(-1)
+        print(queue.popleft()) if queue else print(-1)
     elif command[0] == 'size':
         print(len(queue))
     elif command[0] == 'empty':
