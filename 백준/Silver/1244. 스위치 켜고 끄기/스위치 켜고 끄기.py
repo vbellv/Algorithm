@@ -51,12 +51,8 @@ for _ in range(student_num):
         check = girl(num)
         for idx in check:
             if state[num - idx] == state[num + idx]:
-                if state[num - idx] == 0:
-                    state[num - idx] = 1
-                    state[num + idx] = 1
-                else:
-                    state[num - idx] = 0
-                    state[num + idx] = 0
+                switch(num - idx)
+                switch(num + idx)
             else:
                 break
         switch(num)
