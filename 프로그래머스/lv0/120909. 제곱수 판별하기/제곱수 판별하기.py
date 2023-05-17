@@ -1,3 +1,2 @@
 def solution(n):
-    import math
-    return 1 if int(math.sqrt(n)) ** 2 == n else 2
+    return 1 if int(n ** 0.5) ** 2 == n else 2
