@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 n = int(input())
 
-for idx in range(n):
+for _ in range(n):
     student = list(map(int, input().split()))
     average = sum(student[1:]) / student[0]
     
