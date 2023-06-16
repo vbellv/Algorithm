@@ -1,3 +1,2 @@
 def solution(n, numlist):
-    answer = [num for num in numlist if num % n == 0]
-    return answer
+    return list(filter(lambda num : num % n == 0, numlist))
