@@ -1,2 +1,4 @@
 def solution(my_string, num1, num2):
-    return my_string[:num1] + my_string[num2] + my_string[num1+1:num2] + my_string[num1] + my_string[num2+1:]
+    word = list(my_string)
+    word[num1], word[num2] = word[num2], word[num1]
+    return ''.join(word)
