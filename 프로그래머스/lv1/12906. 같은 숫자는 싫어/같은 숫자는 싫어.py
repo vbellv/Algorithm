@@ -1,8 +1,8 @@
 def solution(arr):
-    check_list = [arr[0]]
+    check_list = []
     
-    for i in range(len(arr)):
-        if check_list[-1] != arr[i]:
-            check_list.append(arr[i])
+    for i in arr:
+        if check_list[-1:] != [i]:
+            check_list.append(i)
     
     return check_list
