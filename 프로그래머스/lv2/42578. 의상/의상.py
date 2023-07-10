@@ -1,4 +1,3 @@
-
 def solution(clothes):
     clothes_dict = {}
     answer = 1
