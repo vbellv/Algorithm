@@ -1,14 +1,10 @@
+from collections import Counter
+
 def solution(clothes):
-    clothes_dict = {}
     answer = 1
+    count = Counter([kind for name, kind in clothes])
     
-    for num in clothes:
-        clothes_dict[num[1]] = 0
-        
-    for num in clothes:
-        clothes_dict[num[1]] += 1
+    for num in count.values():
+        answer *= (num+1)
     
-    for val in clothes_dict.values():
-        answer *= (val + 1)
-    
-    return answer - 1
+    return answer-1
