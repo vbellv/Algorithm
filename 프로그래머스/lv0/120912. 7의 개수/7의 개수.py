@@ -1,9 +1,3 @@
 def solution(array):
-    cnt = 0
-    
-    for arr in array:
-        for i in str(arr):
-            if int(i) == 7:
-                cnt += 1
-    
-    return cnt
+    answer = [int(i) for arr in array for i in str(arr)]
+    return answer.count(7) 
