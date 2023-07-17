@@ -1,3 +1,2 @@
 def solution(array):
-    answer = [int(i) for arr in array for i in str(arr)]
-    return answer.count(7) 
+    return str(array).count('7') 
