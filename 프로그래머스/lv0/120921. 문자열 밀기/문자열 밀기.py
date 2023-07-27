@@ -7,12 +7,14 @@ def solution(A, B):
     
     if A == B:
         return cnt
+    
     elif A != B:
         while True:
             A.rotate()
             cnt += 1
+            
             if A == B:
                 return cnt
+            
             elif cnt > len(A):
                 return -1
-    
