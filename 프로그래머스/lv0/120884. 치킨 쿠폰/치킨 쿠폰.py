@@ -10,11 +10,10 @@ def solution(chicken):
         extra_coupon += chicken % 10
         chicken = chicken // 10
     
-        # 남은 총 쿠폰(chicken)이 1인 경우,
-        # 서비스 치킨 1마리를 먹었다는 의미 == 쿠폰 1장이 생겼다는 의미
+        # 남은 총 쿠폰(chicken)이 10개 미만인 경우,
+        # 서비스 치킨을 먹음으로써 생기는 쿠폰 수 전체를 extra_coupon에 더해줌
         if chicken < 10:
             extra_coupon += chicken
-    
     
     # 쿠폰들의 총합이 10개가 넘을 경우,
     # 쿠폰 10장당 서비스 치킨 1마리를 먹을 수 있기 때문에 10으로 나눠줌
