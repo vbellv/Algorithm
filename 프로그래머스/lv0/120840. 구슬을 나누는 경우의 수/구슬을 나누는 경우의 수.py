@@ -1,4 +1,4 @@
-import math
+from math import factorial as F
 
 def solution(balls, share):
-    return math.factorial(balls) // (math.factorial(balls-share) * math.factorial(share))
+    return F(balls) // (F(balls-share) * F(share))
