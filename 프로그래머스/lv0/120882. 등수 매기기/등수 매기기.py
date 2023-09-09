@@ -1,30 +1,24 @@
 def solution(score):
-    rank_score, cnt, check = 101, 0, 0
-    rank_dict = {}
-    answer = []
+    ranks = sorted([sum(scores) for scores in score], reverse=True)
     
-    for rank in sorted([sum(scores)/2 for scores in score], reverse=True):
+    rank_score, cnt, check = 201, 0, 0
+    rank_dict = {}
+    
+    for rank in ranks:
         if rank < rank_score:
             cnt += 1
-            
+
             if check != 0:
                 cnt += check
                 check = 0
-                
+
             rank_dict[rank] = cnt
             rank_score = rank
-            
+
         elif rank == rank_score:
             rank_dict[rank] = cnt
-            check += 1
-            
-    for scores in score:
-        answer.append(rank_dict[sum(scores)/2])
-        
-    return answer
+            check += 1   
 
-print(solution([[80, 70], [90, 50], [90, 50], [90, 50], [40, 70], [50, 80]]))
+    answer = [rank_dict[sum(scores)] for scores in score]
     
-    
-            
-            
+    return answer
