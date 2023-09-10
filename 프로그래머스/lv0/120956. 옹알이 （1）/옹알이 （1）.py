@@ -7,7 +7,6 @@ def solution(babbling):
     
     words = list(permutations(baby, 2)) + list(permutations(baby, 3)) + list(permutations(baby, 4))
     
-    
     for word in words:
         word_list.append(''.join(word))
     word_list += baby
