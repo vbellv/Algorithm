@@ -1,2 +1,5 @@
 def solution(spell, dic):
-    return 1 if any(all(i in word for i in spell) for word in dic) else 2
+    if any(all(alphabet in word for alphabet in spell) for word in dic):
+    	return 1
+    else:
+    	return 2
