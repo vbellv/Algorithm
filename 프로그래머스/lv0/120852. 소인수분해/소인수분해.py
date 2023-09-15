@@ -9,7 +9,7 @@ def solution(n):
                         answer.append(num)
                 else:
                     answer.append(num)
-            if num == 2 or num == 3 or num == 5 or num == 7:
+            if num in (2, 3, 5, 7):
                 answer.append(num)
                 
     return answer
