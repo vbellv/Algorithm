@@ -1,4 +1,4 @@
-def solution(polynomial):
+def num_split(polynomial):
     x_list, num_list = [], []
     
     polynomial = polynomial.split(' + ')
@@ -9,6 +9,10 @@ def solution(polynomial):
         else:
             num_list.append(i)
             
+    return x_list, num_list
+
+def sum_list(polynomial):
+    x_list, num_list = num_split(polynomial)
     
     for i in range(len(x_list)):
         if 'x' == x_list[i]:
@@ -19,6 +23,11 @@ def solution(polynomial):
     x_sum = sum(list(map(int, x_list)))
     num_sum = sum(list(map(int, num_list)))
     
+    return x_sum, num_sum
+
+def solution(polynomial):
+    x_sum, num_sum = sum_list(polynomial)
+            
     if num_sum > 0:
         if x_sum == 1:
             return 'x + ' + str(num_sum)
