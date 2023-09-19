@@ -3,9 +3,8 @@ def solution(n):
     num = 0
     
     while True:
-        if num % 3 != 0:
-            if '3' not in str(num):
-                except_three_list.append(num)
+        if num % 3 != 0 and '3' not in str(num):
+            except_three_list.append(num)
         
         num += 1
         
