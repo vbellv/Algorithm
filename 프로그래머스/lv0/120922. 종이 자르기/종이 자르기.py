@@ -1,26 +1,22 @@
-def solution(M, N):
-    M_cnt, N_cnt = 0, 0
-    M_copy = M
+def cut_paper(num):
+    num_cnt = 0
     
     while True:
-        if M == 1:
-            break
-        if M > 1:
-            M -= 1
-            M_cnt += 1
-        
-    while True:
-        if N == 1:
-            break
-        if N > 1:
-            N -= 1
-            N_cnt += 1
+        if num == 1: break
+        if num > 1:
+            num -= 1
+            num_cnt += 1
+    
+    return num_cnt
+
+def solution(M, N):
+    M_cnt = cut_paper(M)
+    N_cnt = cut_paper(N)    
             
     if M_cnt and N_cnt == 0:
         return 0
     elif M_cnt and N_cnt != 0:
-        # print(M_cnt + M * N_cnt)
-        return M_cnt + M_copy * N_cnt
+        return M_cnt + M * N_cnt
     elif M_cnt == 0 or N_cnt == 0:
         return M_cnt + N_cnt
     
