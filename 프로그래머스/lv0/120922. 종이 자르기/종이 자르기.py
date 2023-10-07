@@ -19,5 +19,3 @@ def solution(M, N):
         return M_cnt + M * N_cnt
     elif M_cnt == 0 or N_cnt == 0:
         return M_cnt + N_cnt
-    
-print(solution(1, 5))
