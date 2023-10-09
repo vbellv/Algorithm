@@ -1,2 +1,1 @@
-str = str(input().strip())
-print(str.swapcase())
+print(str(input().strip()).swapcase())
