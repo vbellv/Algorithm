@@ -1,10 +1,10 @@
-# [unrated] 대소문자 바꿔서 출력하기 - 181949 
+# [level unrated] 대소문자 바꿔서 출력하기 - 181949 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181949) 
 
 ### 성능 요약
 
-메모리: 7.27 MB, 시간: 12.54 ms
+메모리: 7.18 MB, 시간: 18.42 ms
 
 ### 구분
 
@@ -13,6 +13,10 @@
 ### 채점결과
 
 정확성: 100.0<br/>합계: 100.0 / 100.0
+
+### 제출 일자
+
+2023년 10월 1일 17:56:26
 
 ### 문제 설명
 
@@ -45,4 +49,4 @@
 <p>※2023년 05월 03일 제한사항이 수정되었습니다.</p>
 
 
-> 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+> 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
