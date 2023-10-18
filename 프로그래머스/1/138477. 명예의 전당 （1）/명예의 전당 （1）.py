@@ -8,5 +8,3 @@ def solution(k, score):
         answer.append(score_list[:k][-1])
             
     return answer
-            
-            
