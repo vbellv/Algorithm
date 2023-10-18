@@ -21,10 +21,6 @@ def make_dict(answers):
 
 def solution(answers):
     cnt_dict = make_dict(answers)
-    answer = []
-
-    for key, val in cnt_dict.items():
-        if val == max(cnt_dict.values()):
-            answer.append(key)
     
-    return answer
+    return [key for key, val in cnt_dict.items() if val == max(cnt_dict.values())]
+    
