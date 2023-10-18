@@ -5,22 +5,17 @@ def make_dict(answers):
     PERSON3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5] * N
     
     cnt_dict = {}
-    cnt_1, cnt_2, cnt_3 = 0, 0, 0
     
     for num in range(1, 4):
         cnt_dict[num] = cnt_dict.get(num, 0)
 
     for i in range(len(answers)):
         if answers[i] == PERSON1[i]:
-            cnt_1 += 1
+            cnt_dict[1] += 1
         if answers[i] == PERSON2[i]:
-            cnt_2 += 1
+            cnt_dict[2] += 1
         if answers[i] == PERSON3[i]:
-            cnt_3 += 1
-            
-    cnt_dict[1] = cnt_1
-    cnt_dict[2] = cnt_2
-    cnt_dict[3] = cnt_3
+            cnt_dict[3] += 1
     
     return cnt_dict
 
