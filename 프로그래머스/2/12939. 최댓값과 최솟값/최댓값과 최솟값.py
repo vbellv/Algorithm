@@ -1,4 +1,3 @@
 def solution(s):
-    s = s.split(' ')
-    s = list(map(int, s))
+    s = list(map(int, s.split(' ')))
     return f'{min(s)} {max(s)}'
