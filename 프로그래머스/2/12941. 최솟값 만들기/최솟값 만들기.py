@@ -3,7 +3,7 @@ def solution(A,B):
     B = sorted(B, reverse=True)
     answer = 0
     
-    for idx in range(len(A)):
-        answer += A[idx] * B[idx]
+    for a, b in zip(A, B):
+        answer += a * b
         
     return answer
