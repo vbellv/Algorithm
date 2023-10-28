@@ -29,9 +29,7 @@ def solution(X, Y):
     
     if len(check_list) == 0:
         return '-1'
-    
     elif len(set(check_list)) == 1:
         return check_list[0]
-    
     else:
         return ''.join(check_list)
