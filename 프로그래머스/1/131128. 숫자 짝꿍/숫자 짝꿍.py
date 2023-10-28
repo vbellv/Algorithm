@@ -1,27 +1,21 @@
 def solution(X, Y):
-    check_list = []
-    point_X, point_Y = 0, 0
+    check_list = []				# 정답을 받을 리스트 선언
+    point_X, point_Y = 0, 0		# 포인터 선언
     
+    # 오름차순으로 정렬
     X, Y = sorted(X), sorted(Y)
     
-    if len(X) > len(Y):
-        min_len = Y
-        max_len = X
-    else:
-        min_len = X
-        max_len = Y
-    
     while True:
-        if point_X >= len(min_len) or point_Y >= len(max_len):
+        if point_X >= len(X) or point_Y >= len(Y):
             break
         
-        if min_len[point_X] != max_len[point_Y]:
-            if min(min_len[point_X], max_len[point_Y]) == min_len[point_X]:
+        if X[point_X] != Y[point_Y]:
+            if min(X[point_X], Y[point_Y]) == X[point_X]:
                 point_X += 1
             else:
                 point_Y += 1
         else:
-            check_list.append(min_len[point_X])
+            check_list.append(X[point_X])
             point_X += 1
             point_Y += 1
     
