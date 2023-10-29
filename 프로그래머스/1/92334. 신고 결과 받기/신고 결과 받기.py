@@ -10,7 +10,6 @@ def user_dictionary(id_list, report):
         
     return report_dict, user_dict
 
-
 def solution(id_list, report, k):
     report_dict, user_dict = user_dictionary(id_list, report)
     
