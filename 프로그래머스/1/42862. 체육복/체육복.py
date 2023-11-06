@@ -13,13 +13,3 @@ def solution(n, lost, reserve):
             set_reserve.remove(num+1)
             
     return len(check_list)
-            
-    
-            
-            
-    
-    
-    
-    
-    
-print(solution(5, [1, 3], [3, 2]))
