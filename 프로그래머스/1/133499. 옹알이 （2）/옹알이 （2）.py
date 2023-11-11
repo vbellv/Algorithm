@@ -4,13 +4,10 @@ def solution(babbling):
     
     for word in babbling:
         for idx, baby_word in enumerate(baby):
-            word = word.replace(baby_word, str(idx))
-
-        for num in range(len(word)-1):
-            if word[num] == word[num+1]:
-                word = word.replace(word[num], '*')
-        
+            if baby_word*2 not in word:
+                word = word.replace(baby_word, str(idx))
+                
         if word.isdigit():
             cnt += 1
-                    
+                
     return cnt
