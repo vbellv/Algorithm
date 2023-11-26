@@ -1,15 +1,9 @@
 def solution(data, ext, val_ext, sort_by):
-    data_list = ['code', 'date', 'maximum', 'remain']
+    data_dict = {'code': 0, 'date': 1, 'maximum': 2, 'remain': 3}
     new_data = []
     
-    for idx in range(len(data_list)):
-        temp_data = []
-        if data_list[idx] == ext:
-            for datum in data:
-                if datum[idx] < val_ext:
-                    temp_data.append(datum)
-            new_data += temp_data
-    
-    for idx in range(len(data_list)):
-        if data_list[idx] == sort_by:
-            return sorted(new_data, key=lambda x: x[idx])
+    for datum in data:
+        if datum[data_dict[ext]] < val_ext:
+            new_data.append(datum)
+            
+    return sorted(new_data, key=lambda x: x[data_dict[sort_by]])
