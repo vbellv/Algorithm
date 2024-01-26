@@ -4,18 +4,15 @@ cnt = 0
 
 for i in range(n):
     stack = []
-    for j in range(len(words[i])):
+    for word in words[i]:
         if not stack:
-            stack.append(words[i].pop())
+            stack.append(word)
         else:
-            word = words[i].pop()
             if stack[-1] == word:
                 stack.pop()
             else:
                 stack.append(word)
     if not stack:
         cnt += 1
-    else:
-        continue
 
 print(cnt)
