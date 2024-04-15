@@ -6,7 +6,6 @@ def solution(n):
         n += 1
         binary_num = bin(n)[2:]
         new_count_one = str(binary_num).count('1')
-        new_count_zero = str(binary_num).count('0')
 
         if new_count_one == count_one:
             return n
