@@ -3,9 +3,9 @@ def solution(survey, choices):
     rank = {}
     answer = ''
     
-    for ans in indicators:
-        rank[ans[0]] = 0
-        rank[ans[1]] = 0
+    for indicator in indicators:
+        rank[indicator[0]] = 0
+        rank[indicator[1]] = 0
     
     for idx in range(len(survey)):
         if choices[idx] in [1, 2, 3]:
