@@ -6,7 +6,7 @@ def solution(keymap, targets):
     
     for target in total_targets:
         for word in target:
-            target_dict[word] = 999999
+            target_dict[word] = 999
     
     for key in keymap:
         for idx in range(len(key)):
@@ -20,7 +20,7 @@ def solution(keymap, targets):
         cnt = 0
         for word in target:
             cnt += target_dict[word]
-        if cnt >= 999999:
+        if cnt >= 999:
             cnt = -1
         answer.append(cnt)
         
