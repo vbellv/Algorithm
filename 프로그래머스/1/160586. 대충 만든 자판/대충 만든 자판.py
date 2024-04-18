@@ -20,12 +20,10 @@ def solution(keymap, targets):
         cnt = 0
         for word in target:
             cnt += target_dict[word]
+        if cnt >= 999999:
+            cnt = -1
         answer.append(cnt)
         
-    for idx in range(len(answer)):
-        if answer[idx] >= 999999:
-            answer[idx] = -1
-
     return answer
 
     
