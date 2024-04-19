@@ -54,8 +54,7 @@ def solution(numbers, hand):
                     answer += 'R'
                     right_hand = number
                 else:
-                    if hand == 'left':
-                        answer += 'L'
-                        left_hand = number
+                    answer += 'L'
+                    left_hand = number
 
     return answer
