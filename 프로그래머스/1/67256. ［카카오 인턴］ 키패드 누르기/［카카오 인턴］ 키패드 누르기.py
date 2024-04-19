@@ -3,14 +3,12 @@ def calculate_distance(hand, number, distance):
                     4: 1, 5: 1, 6: 1,
                     7: 2, 8: 2, 9: 2,
                     10: 3, 0: 3, 11: 3}
-    hand_distance = 0
     
-    hand_distance += distance[numbers_dict[hand]][numbers_dict[number]]
+    hand_distance = distance[numbers_dict[hand]][numbers_dict[number]]
 
     return hand_distance
 
 def solution(numbers, hand):
-    
     answer = ''
     left_hand, right_hand = 10, 11
     
