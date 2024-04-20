@@ -21,10 +21,7 @@ def bfs(x, y):
                     
             if nx < 0 or ny < 0 or nx >= n or ny >= m:
                 continue
-            
-            if maps[nx][ny] == 0:
-                continue
-            
+
             if maps[nx][ny] == 1:
                 maps[nx][ny] = maps[x][y] + 1
                 queue.append((nx, ny))
