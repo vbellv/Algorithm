@@ -1,21 +1,22 @@
 def solution(wallpaper):
-    files_index = []
+    x_list, y_list = [], []
     
     for idx1, files in enumerate(wallpaper):
         for idx2, file in enumerate(files):
             if file == '#':
-                files_index.append((idx1, idx2))
+                x_list.append(idx1)
+                y_list.append(idx2)
     
     # lux 좌표
-    lux = sorted(files_index)[0][0]
+    lux = min(x_list)
     
     # luy 좌표
-    luy = sorted(files_index, key=lambda x: x[1])[0][1]
+    luy = min(y_list)
     
     # rdx 좌표
-    rdx = sorted(files_index)[-1][0]
+    rdx = max(x_list) + 1
     
     # rdy 좌표
-    rdy = sorted(files_index, key=lambda x: -x[1])[0][1]
+    rdy = max(y_list) + 1
     
-    return [lux, luy, rdx+1, rdy+1]
+    return [lux, luy, rdx, rdy]
