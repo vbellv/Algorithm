@@ -6,8 +6,5 @@ def solution(myString, pat):
         word = myString.pop()
         stack.append(word)
 
-        try:
-            if stack[-len(pat):][::-1] == list(pat):
-                return ''.join(myString) + pat
-        except:
-            pass
+        if stack[-len(pat):][::-1] == list(pat):
+            return ''.join(myString) + pat
