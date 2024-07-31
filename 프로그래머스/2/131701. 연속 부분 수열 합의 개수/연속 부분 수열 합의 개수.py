@@ -1,17 +1,12 @@
-from collections import deque
-
 def solution(elements):
-    answer = []
-
-    for num in range(1, len(elements) + 1):
-        queue = deque()
-        total_elements = elements + elements[:num - 1]      
-        while total_elements:
-            number = total_elements.pop()
-            queue.append(number)
+    answer = set()
+    
+    n = len(elements)
+    total_elements = elements * 2
+    
+    for num in range(1, n + 1):
+        for i in range(n):
+            sum_array = sum(total_elements[i : i + num])
+            answer.add(sum_array)
             
-            if len(queue) == num:
-                answer.append(sum(queue))
-                queue.popleft()
-
-    return len(set(answer))
+    return len(answer)
