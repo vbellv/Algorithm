@@ -1,14 +1,9 @@
-import sys
 from collections import deque
-input = sys.stdin.readline
 
-n, m = map(int, input().split())
-maps = [list(map(int, input().rstrip())) for _ in range(n)]
-
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
-        
 def bfs(x, y):
+    dx = [-1, 1, 0, 0]
+    dy = [0, 0, -1, 1]
+    
     queue = deque()
     queue.append((x, y))
     
@@ -27,5 +22,9 @@ def bfs(x, y):
                 queue.append((nx, ny))
             
     return maps[n-1][m-1]
+
+
+n, m = map(int, input().split())
+maps = [list(map(int, input().rstrip())) for _ in range(n)]
 
 print(bfs(0, 0))
