@@ -6,7 +6,6 @@ def solution(arr, k):
             stack.append(number)
 
         if len(stack) == k:
-            return stack
+            break
     
-    if len(stack) != k:
-        return stack + [-1] * (k - len(stack))
+    return stack + [-1] * (k - len(stack))
