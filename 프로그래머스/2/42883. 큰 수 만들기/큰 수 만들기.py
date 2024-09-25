@@ -2,18 +2,12 @@ def solution(number, k):
     answer = []
     
     for num in number:
-        if not answer:
-            answer.append(num)
-            continue
-            
-        if k > 0:
-            while answer[-1] < num:
-                answer.pop()
-                k -= 1
-                if not answer or k <= 0:
-                    break
+        while len(answer) > 0 and answer[-1] < num and k > 0:
+            k -= 1
+            answer.pop()
         answer.append(num)
     
-    answer = answer[:-k] if k > 0 else answer
-    
+    if k != 0:
+        answer = number[:-k]
+        
     return ''.join(answer)
