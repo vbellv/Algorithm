@@ -1,8 +1,11 @@
+import re
+
 def solution(l, r):
     answer = []
+    pattern = re.compile('^[05]+$')
     
     for number in range(l, r + 1):
-        if not set(str(number)) - set(['0', '5']):
+        if number % 5 == 0 and pattern.match(str(number)):
             answer.append(number)
     
     return answer if answer else [-1]
