@@ -1,7 +1,7 @@
-numbers = list(map(int, input().split()))
+a, b, c, d, e, f = map(int, input().split())
 
 for i in range(-999, 1000):
     for j in range(-999, 1000):
-        if numbers[0] * i + numbers[1] * j == numbers[2] and numbers[3] * i + numbers[4] * j == numbers[5]:
+        if a * i + b * j == c and d * i + e * j == f:
             print(i, j)
             break
